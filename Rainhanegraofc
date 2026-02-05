@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainha Negra • Catálogo Oficial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Playfair Display',serif;
+  background:#0b1f2a;
+  color:#f5faff;
+}
+
+/* CAPA */
+header{
+  height:90vh;
+  background:
+    linear-gradient(rgba(5,15,30,0.75),rgba(5,15,30,0.9)),
+    url("IMG-20260204-WA0025.jpg");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+/* TÍTULO COM AURA */
+header h1{
+  font-family:'Cinzel',serif;
+  font-size:3rem;
+  letter-spacing:4px;
+  position:relative;
+  margin:0;
+}
+
+header h1::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:150%;
+  height:170%;
+  background:radial-gradient(circle,
+    rgba(180,220,255,0.35),
+    rgba(180,220,255,0.12),
+    transparent);
+  transform:translate(-50%,-50%);
+  filter:blur(28px);
+  z-index:-1;
+}
+
+header p{
+  margin-top:12px;
+  opacity:.9;
+}
+
+/* SEÇÕES */
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:50px 20px;
+}
+
+h2{
+  font-family:'Cinzel',serif;
+  text-align:center;
+  margin-bottom:30px;
+  letter-spacing:2px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:14px;
+  padding:22px;
+  text-align:center;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 20px rgba(160,210,255,.3);
+}
+
+.card h3{
+  font-family:'Cinzel',serif;
+  margin-bottom:8px;
+}
+
+.preco{
+  font-size:1.1rem;
+  font-weight:bold;
+  color:#b6e0ff;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:white;
+  padding:14px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  font-size:13px;
+  opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <h1>RAINHA NEGRA</h1>
+    <p>Cartomancia • Encantaria • Alquimias Espirituais</p>
+  </div>
+</header>
+
+<section>
+<h2>🔮 Cartomancia</h2>
+<div class="grid">
+
+<div class="card" onclick="zap('1 Pergunta no Baralho – R$40,00')">
+<h3>1 Pergunta no Baralho</h3>
+<p class="preco">R$ 40,00</p>
+</div>
+
+<div class="card" onclick="zap('Jogo do Amor – R$97,00')">
+<h3>Jogo do Amor</h3>
+<p class="preco">R$ 97,00</p>
+</div>
+
+<div class="card" onclick="zap('Consulta Completa – R$300,00')">
+<h3>Consulta Completa</h3>
+<p class="preco">R$ 300,00</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>🧪 Alquimias da Rainha Negra</h2>
+<div class="grid">
+
+<div class="card" onclick="zap('Perfume Atração de Amor – R$600,00')"><h3>Perfume Atração de Amor</h3><p class="preco">R$ 600,00</p></div>
+
+<div class="card" onclick="zap('Perfume Atração de Dinheiro – R$600,00')"><h3>Perfume Atração de Dinheiro</h3><p class="preco">R$ 600,00</p></div>
+
+<div class="card" onclick="zap('Perfume Sedução e Libido – R$600,00')"><h3>Perfume Sedução & Libido</h3><p class="preco">R$ 600,00</p></div>
+
+<div class="card" onclick="zap('Fluido de Proteção e Purificação – R$600,00')"><h3>Fluido de Proteção & Purificação</h3><p class="preco">R$ 600,00</p></div>
+
+<div class="card" onclick="zap('Fluido de Energia, Vitalidade e Prosperidade – R$600,00')"><h3>Fluido de Energia & Prosperidade</h3><p class="preco">R$ 600,00</p></div>
+
+<div class="card" onclick="zap('Fluido para Relaxamento e Sono Profundo – R$600,00')"><h3>Fluido para Sono Profundo</h3><p class="preco">R$ 600,00</p></div>
+
+<div class="card" onclick="zap('Poção Mágica para Limpeza Espiritual – R$600,00')"><h3>Poção de Limpeza Espiritual</h3><p class="preco">R$ 600,00</p></div>
+
+<div class="card" onclick="zap('Poção para Fechar o Campo Energético – R$600,00')"><h3>Poção de Fechamento Energético</h3><p class="preco">R$ 600,00</p></div>
+
+<div class="card" onclick="zap('Poção Contra-Ataque – R$600,00')"><h3>Poção Contra-Ataque</h3><p class="preco">R$ 600,00</p></div>
+
+<div class="card" onclick="zap('Kit com 6 Produtos – R$1.200,00')"><h3>Kit com 6 Produtos</h3><p class="preco">R$ 1.200,00</p></div>
+
+<div class="card" onclick="zap('Alquimias Personalizadas – a partir de R$600,00')">
+<h3>Alquimias Personalizadas</h3>
+<p class="preco">A partir de R$ 600,00</p>
+</div>
+
+</div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/5514999055710">💬 WhatsApp</a>
+
+<footer>
+© Rainha Negra • Atendimento espiritual exclusivo via WhatsApp
+</footer>
+
+<script>
+function zap(produto){
+  const msg = encodeURIComponent("Olá 🌙 Tenho interesse em: " + produto);
+  window.open("https://wa.me/5514999055710?text=" + msg,"_blank");
+}
+</script>
+
+</body>
+</html>
